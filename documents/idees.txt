@@ -1,0 +1,10 @@
+-Création d'un labyrinthe par défaut
+-Plusieurs étages
+-Différentes cases (vide / piégées / murs / escaliers)
+-Création d'un personnage de base
+-Personnage peut se déplacer sur toutes les cases sauf murs
+-Création de monstres
+-Personnage et monstres peuvent attaquer
+-Personnage et monstres ont des pts de vies et peuvent mourir
+-Pour gagner le personnage doit atteindre la case victoire
+
