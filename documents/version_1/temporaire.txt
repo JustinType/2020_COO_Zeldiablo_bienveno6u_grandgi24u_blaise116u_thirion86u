@@ -1,0 +1,2 @@
+Fichier txt qui sert juste à faire le premier commit
+A supprimé lorsqu'on ajoute qqch dans ce dossier
