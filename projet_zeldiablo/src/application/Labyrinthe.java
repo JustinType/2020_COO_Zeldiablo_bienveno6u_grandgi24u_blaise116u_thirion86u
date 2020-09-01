@@ -4,7 +4,8 @@ public class Labyrinthe {
 
 	public Labyrinthe() {
 		//Clement
-		// Hugros 
+		// Hugros
+		// YO
 	}
 
 }
