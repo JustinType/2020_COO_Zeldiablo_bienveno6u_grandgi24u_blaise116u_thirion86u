@@ -26,7 +26,7 @@ public class Dessin implements DessinAbstract {
 		
 		ArrayList<Case> cases = this.j.cases;
 		for (Case c : cases) {
-			Sprites.dessinerCentre(g, "case_11_1", (int) c.x, (int) c.y);
+			Sprites.dessinerCentre(g, c.getSprite(), (int) c.x, (int) c.y);
 		}
 		Sprites.dessinerCentre(g,"megaman",j.getPlayer().getX(),j.getPlayer().getY());
 	}
