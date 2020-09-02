@@ -16,32 +16,32 @@ public class Jeu implements JeuAbstract {
 		// Création du labyrinthe par défaut
 		this.cases = new ArrayList<>();
 		for (int y=15; y<600 ; y+=30) {
-			this.cases.add(new Case(15, y));
+			this.cases.add(new Mur(15, y));
 		}
 		for (int y=15; y<600 ; y+=30) {
-			this.cases.add(new Case(885, y));
+			this.cases.add(new Mur(885, y));
 		}
 		for (int i=15; i<900 ; i+=30) {
-			this.cases.add(new Case(i, 15));
+			this.cases.add(new Mur(i, 15));
 		}
 		for (int i=15; i<900 ; i+=30) {
-			this.cases.add(new Case(i, 585));
+			this.cases.add(new Mur(i, 585));
 		}
 		
 		
-		this.cases.add(new Case(45,75));
-		this.cases.add(new Case(45,225));
-		this.cases.add(new Case(75,225));
-		this.cases.add(new Case(105,225));
-		this.cases.add(new Case(105,255));
+		this.cases.add(new Mur(45,75));
+		this.cases.add(new Mur(45,225));
+		this.cases.add(new Mur(75,225));
+		this.cases.add(new Mur(105,225));
+		this.cases.add(new Mur(105,255));
 		
-		this.cases.add(new Case(585,255));
-		this.cases.add(new Case(555,255));
-		this.cases.add(new Case(525,255));
-		this.cases.add(new Case(495,255));
-		this.cases.add(new Case(365,255));
-		this.cases.add(new Case(365,225));
-		this.cases.add(new Case(365,195));
+		this.cases.add(new Mur(585,255));
+		this.cases.add(new Mur(555,255));
+		this.cases.add(new Mur(525,255));
+		this.cases.add(new Mur(495,255));
+		this.cases.add(new Mur(365,255));
+		this.cases.add(new Mur(365,225));
+		this.cases.add(new Mur(365,195));
 		
 	}
 	
