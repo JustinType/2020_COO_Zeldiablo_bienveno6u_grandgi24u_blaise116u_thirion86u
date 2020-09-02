@@ -7,15 +7,16 @@ public class Player {
 	private int y;
 	private int xVel;
 	private int yVel;
-	
 	private int vitesse;
+	private Jeu jeu;
 	
-	public Player(int posX,int posY,int vitesse) {
+	public Player(int posX,int posY,int vitesse, Jeu j) {
 		this.x = posX;
 		this.y = posY;
 		this.vitesse = vitesse;
 		this.xVel = 0;
 		this.yVel = 0;
+		this.jeu = j;
 	}
 	
 	
@@ -28,8 +29,11 @@ public class Player {
 	}
 	
 	public void seDeplacer() {
-		this.x+= this.xVel;
-		this.y+= this.yVel;
+		if (!jeu.collision(this.x+this.xVel, this.y+this.yVel)) {
+			this.x+= this.xVel;
+			this.y+= this.yVel;
+		}
+		
 	}
 
 	public void Collision(Case c) {

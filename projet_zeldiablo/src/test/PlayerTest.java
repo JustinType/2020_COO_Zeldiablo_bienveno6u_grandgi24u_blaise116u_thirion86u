@@ -4,11 +4,14 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import application.Jeu;
 import application.Player;
+import moteurJeu.moteur.JeuAbstract;
 
 class PlayerTest {
 
-	Player p1 = new Player(400,320,10);
+	Jeu j = new Jeu();
+	Player p1 = new Player(400,320,10,j);
 	
 	@Test
 	void testSeDeplacerDroite() {
