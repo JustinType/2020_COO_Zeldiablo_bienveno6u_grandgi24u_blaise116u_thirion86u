@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import moteurJeu.moteur.CClavier;
@@ -9,6 +10,7 @@ import moteurJeu.moteur.JeuAbstract;
 public class Jeu implements JeuAbstract {
 	
 	ArrayList<Case> cases; 
+	Player p1 = new Player(400,320,10);
 	
 	public Jeu() {
 		// Création du labyrinthe par défaut
@@ -44,8 +46,22 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	@Override
-	public String evoluer(CClavier controle, CSouris souris) {
-		// evoluer ne fait rien
+	public String evoluer(CClavier clavier, CSouris souris) {
+		
+		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
+			p1.seDeplacer("right");
+		}
+		if(clavier.isPressed(KeyEvent.VK_LEFT)) { 
+			p1.seDeplacer("left");
+		}
+		if(clavier.isPressed(KeyEvent.VK_UP)) {
+			p1.seDeplacer("up");
+		}
+		if(clavier.isPressed(KeyEvent.VK_DOWN)) {
+			p1.seDeplacer("down");
+		}
+
+		
 		return ("");
 	}
 
@@ -55,5 +71,8 @@ public class Jeu implements JeuAbstract {
 		return false;
 	}
 
+	public Player getPlayer() {
+		return p1;
+	}
 	
 }

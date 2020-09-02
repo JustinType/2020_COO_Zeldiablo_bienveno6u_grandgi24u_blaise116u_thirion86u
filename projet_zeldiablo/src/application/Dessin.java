@@ -11,11 +11,11 @@ import moteurJeu.sprite.Sprites;
 
 public class Dessin implements DessinAbstract {
 	
-	Jeu jeu;
+	Jeu j;
 
 	public Dessin(Jeu j) {
 		// charger sprites
-		this.jeu = j;
+		this.j = j;
 		Sprites.chargerImage("megaman", "images/megaman.png");
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);
 	}
@@ -24,10 +24,10 @@ public class Dessin implements DessinAbstract {
 	public void dessiner(BufferedImage image) {
 		Graphics2D g=(Graphics2D)image.getGraphics();
 		
-		ArrayList<Case> cases = this.jeu.cases;
+		ArrayList<Case> cases = this.j.cases;
 		for (Case c : cases) {
 			Sprites.dessinerCentre(g, "case_11_1", (int) c.x, (int) c.y);
 		}
-		Sprites.dessinerCentre(g, "megaman", 300, 200);
+		Sprites.dessinerCentre(g,"megaman",j.getPlayer().getX(),j.getPlayer().getY());
 	}
 }
