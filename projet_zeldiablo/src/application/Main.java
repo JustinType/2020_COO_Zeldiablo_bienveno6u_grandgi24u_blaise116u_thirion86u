@@ -19,8 +19,8 @@ public class Main {
 		
 		//on lance le moteur
 		int fps=60;
-		int tailleX=600;
-		int tailleY=400;
+		int tailleX=900;
+		int tailleY=600;
 		m.lancerJeu(tailleX, tailleY, fps);
 	}
 }

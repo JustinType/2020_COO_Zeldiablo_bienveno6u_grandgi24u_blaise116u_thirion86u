@@ -15,17 +15,17 @@ public class Jeu implements JeuAbstract {
 	public Jeu() {
 		// Création du labyrinthe par défaut
 		this.cases = new ArrayList<>();
-		for (int y=15; y<400 ; y+=30) {
+		for (int y=15; y<600 ; y+=30) {
 			this.cases.add(new Case(15, y));
 		}
-		for (int y=15; y<400 ; y+=30) {
-			this.cases.add(new Case(585, y));
+		for (int y=15; y<600 ; y+=30) {
+			this.cases.add(new Case(885, y));
 		}
-		for (int i=15; i<600 ; i+=30) {
+		for (int i=15; i<900 ; i+=30) {
 			this.cases.add(new Case(i, 15));
 		}
-		for (int i=15; i<600 ; i+=30) {
-			this.cases.add(new Case(i, 385));
+		for (int i=15; i<900 ; i+=30) {
+			this.cases.add(new Case(i, 585));
 		}
 		
 		
