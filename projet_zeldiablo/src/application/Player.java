@@ -45,7 +45,7 @@ public class Player {
 		this.y+= yv;
 		
 		for (Case c : cases) {
-			if (collision(c,xv,yv)) {
+			if (collision(c,xv,yv) && c.getRempli()==true) {
 				if (xv > 0) {this.x = c.getX()-30;}
 				if (xv < 0) {this.x = c.getX()+30;}
 				if (yv > 0) {this.y = c.getY()-30;}
