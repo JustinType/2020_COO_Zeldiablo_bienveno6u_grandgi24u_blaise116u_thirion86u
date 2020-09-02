@@ -17,6 +17,7 @@ public class Dessin implements DessinAbstract {
 		// charger sprites
 		this.j = j;
 		Sprites.chargerImage("megaman", "images/megaman.png");
+		Sprites.chargerImage("escalier", "images/escalier.png");
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);
 	}
 

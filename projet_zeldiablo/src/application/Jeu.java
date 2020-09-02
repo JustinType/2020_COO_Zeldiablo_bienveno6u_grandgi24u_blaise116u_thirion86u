@@ -43,6 +43,8 @@ public class Jeu implements JeuAbstract {
 		this.cases.add(new Mur(365,225));
 		this.cases.add(new Mur(365,195));
 		
+		this.cases.add(new Escalier(45,45));
+		
 	}
 	
 	@Override
