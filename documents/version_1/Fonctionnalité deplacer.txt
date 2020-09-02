@@ -1,9 +1,0 @@
-fonctionnalité 1 : [Se Deplacer]
-responsable: switch-bls
-
-Faire se deplacer le personnage dans la carte dans toutes les directions.
-
-Critere de validation:
--le personnage doit pouvoire se deplacer fluidement sur la fenetre.
--vers le haut, le bas, la droite, la gauche.
--les diagonales doivent fonctionnées egalement.
