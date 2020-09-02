@@ -24,13 +24,13 @@ class PlayerTest {
 	
 	@Test
 	void testSeDeplacerHaut() {
-		p1.seDeplacer("up");
+		p1.direction("up");
 		assertEquals("le Personnage aurais du se deplacer de sa vitesse vers le haut",310,p1.getY());
 	}
 	
 	@Test
 	void testSeDeplacerBas() {
-		p1.seDeplacer("down");
+		p1.direction("down");
 		assertEquals("le Personnage aurais du se deplacer de sa vitesse vers le bas",330,p1.getY());
 	}
 }
