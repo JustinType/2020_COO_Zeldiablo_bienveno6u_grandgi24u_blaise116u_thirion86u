@@ -1,0 +1,4 @@
+fonctionnalité 1 : [Se Deplacer]
+responsable: switch-bls
+
+Faire se deplacer le personnage dans la carte dans toutes les directions.
