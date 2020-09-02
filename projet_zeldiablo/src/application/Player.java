@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+
 import application.Case;
 
 public class Player {
@@ -8,15 +10,14 @@ public class Player {
 	private int xVel;
 	private int yVel;
 	private int vitesse;
-	private Jeu jeu;
+
 	
-	public Player(int posX,int posY,int vitesse, Jeu j) {
+	public Player(int posX,int posY,int vitesse) {
 		this.x = posX;
 		this.y = posY;
 		this.vitesse = vitesse;
 		this.xVel = 0;
 		this.yVel = 0;
-		this.jeu = j;
 	}
 	
 	
@@ -28,15 +29,29 @@ public class Player {
 		
 	}
 	
-	public void seDeplacer() {
-		if (!jeu.collision(this.x+this.xVel, this.y+this.yVel)) {
-			this.x+= this.xVel;
-			this.y+= this.yVel;
-		}
-		
+	public void seDeplacer(ArrayList<Case> c) {	
+			if(this.xVel != 0) { deplacerAxe(c,this.xVel,0);}
+			if(this.yVel != 0) { deplacerAxe(c,0,this.yVel);}
 	}
 
-	public void Collision(Case c) {
+	public boolean collision(Case c,int xv,int yv) {
+		return ((this.x  + xv -30 < c.getX()) && 
+				(this.x  + xv +30 > c.getX()) &&
+				(this.y + yv -30< c.getY()) && 
+				(this.y + yv +30> c.getY()));}
+		
+	public void deplacerAxe(ArrayList<Case> cases,int xv,int yv) {
+		this.x+= xv;
+		this.y+= yv;
+		
+		for (Case c : cases) {
+			if (collision(c,xv,yv)) {
+				if (xv > 0) {this.x = c.getX()-30;}
+				if (xv < 0) {this.x = c.getX()+30;}
+				if (yv > 0) {this.y = c.getY()-30;}
+				if (yv < 0) {this.y = c.getY()+30;}	
+			}	
+		}
 	}
 	
 	public int getX() {

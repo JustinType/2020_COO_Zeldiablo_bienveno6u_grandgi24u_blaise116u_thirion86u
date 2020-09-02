@@ -14,17 +14,17 @@ public class Jeu implements JeuAbstract {
 	int spawnX = 465;
 	int spawnY = 45;
 	int vitesse = 3;
-	Player p1 = new Player(spawnX, spawnY, vitesse, this);
+	Player p1 = new Player(spawnX, spawnY, vitesse);
 	
 	public Jeu() {
 		// Creation du labyrinthe par defaut
 		this.cases = new ArrayList<>();   
 		 
-		String[][] lab = { {" "," "," "," "," ","X"," "," "," ","X"," "," "," ","X"," ","X","X"," "," "," ","X"," "," "," "," "," "," ","X"},
-						   {" ","X","X","X","X","X"," ","X"," ","X"," ","X"," ","X"," "," ","X"," ","X"," ","X"," ","X","X","X","X"," ","X"},
-						   {" "," "," "," "," "," "," ","X"," "," "," ","X"," ","X","X"," ","X"," ","X","X","X"," ","X","X"," ","X"," "," "},
-						   {"X","X"," ","X","X","X","X","X"," ","X","X","X"," "," ","X"," "," "," ","X"," "," "," "," ","X"," ","X","X"," "},
-						   {" ","X"," ","X"," "," "," ","X"," "," "," ","X","X","X","X"," ","X"," "," "," ","X","X"," ","X"," "," "," "," "},
+		String[][] lab = { {" "," "," "," "," ","X"," "," "," ","X"," "," "," "," "," ","X","X"," "," "," ","X"," "," "," "," "," "," ","X"},
+						   {" ","X","X","X","X","X"," ","X"," ","X"," "," "," "," "," "," ","X"," ","X"," ","X"," ","X","X","X","X"," ","X"},
+						   {" "," "," "," "," "," "," ","X"," "," "," "," "," "," ","X"," ","X"," ","X","X","X"," ","X","X"," ","X"," "," "},
+						   {"X","X"," ","X","X","X","X","X"," ","X"," "," "," "," ","X"," "," "," ","X"," "," "," "," ","X"," ","X","X"," "},
+						   {" ","X"," ","X"," "," "," ","X"," "," "," "," "," "," ","X"," ","X"," "," "," ","X","X"," ","X"," "," "," "," "},
 						   {" "," "," "," "," ","X","X","X","X","X"," "," "," "," ","X"," ","X","X","X","X","X"," "," "," "," ","X","X"," "},
 						   {" ","X","X","X"," ","X"," "," "," ","X","X"," ","X"," ","X","X","X"," ","X"," "," "," ","X","X","X","X"," "," "},
 						   {" ","X","P"," "," ","X"," ","X"," "," "," "," ","X"," "," "," "," "," "," "," ","X","X","X"," "," "," "," ","X"},
@@ -70,21 +70,6 @@ public class Jeu implements JeuAbstract {
 	}
 	
 	
-	public boolean collision(int posX, int posY) {
-		boolean collision = false;
-		for (Case c : cases) {
-			if(c.getRempli()) {
-				if (c.getY()-25 <= posY && posY <= c.getY()+25) {
-					if(c.getX()-25 <= posX && posX <= c.getX()+25) {
-						collision = true;
-					}
-				}
-				
-			}	
-		}
-		return collision;
-	}
-	
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
 		
@@ -100,8 +85,9 @@ public class Jeu implements JeuAbstract {
 		if(clavier.isPressed(KeyEvent.VK_DOWN)) {
 			p1.direction("down");
 		}
-		p1.seDeplacer();
+		p1.seDeplacer(cases);	
 		p1.reduceVel();
+		
 		
 		return ("");
 	}

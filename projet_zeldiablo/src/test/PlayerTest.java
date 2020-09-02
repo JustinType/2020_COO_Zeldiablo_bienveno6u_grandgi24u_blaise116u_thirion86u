@@ -11,7 +11,7 @@ import moteurJeu.moteur.JeuAbstract;
 class PlayerTest {
 
 	Jeu j = new Jeu();
-	Player p1 = new Player(400,320,10,j);
+	Player p1 = new Player(400,320,10);
 	
 	@Test
 	void testSeDeplacerDroite() {
