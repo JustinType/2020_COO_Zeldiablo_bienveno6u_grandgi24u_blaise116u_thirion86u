@@ -10,11 +10,42 @@ import moteurJeu.moteur.JeuAbstract;
 public class Jeu implements JeuAbstract {
 	
 	ArrayList<Case> cases; 
-	Player p1 = new Player(400,320,10);
+	Player p1 = new Player(450,300,10);
 	
 	public Jeu() {
-		// Création du labyrinthe par défaut
+		// Creation du labyrinthe par defaut
 		this.cases = new ArrayList<>();
+		
+		String[][] lab = { {" "," "," "," "," ","X"," "," "," ","X"," "," "," ","X"," ","X","X"," "," "," ","X"," "," "," "," "," "," ","X"},
+						   {" ","X","X","X","X","X"," ","X"," ","X"," ","X"," ","X"," "," ","X"," ","X"," ","X"," ","X","X","X","X"," ","X"},
+						   {" "," "," "," "," "," "," ","X"," "," "," ","X"," ","X","X"," ","X"," ","X","X","X"," ","X","X"," ","X"," "," "},
+						   {"X","X"," ","X","X","X","X","X"," ","X","X","X"," "," ","X"," "," "," ","X"," "," "," "," ","X"," ","X","X"," "},
+						   {" ","X"," ","X"," "," "," ","X"," "," "," ","X","X","X","X"," ","X"," "," "," ","X","X"," ","X"," "," "," "," "},
+						   {" "," "," "," "," ","X","X","X","X","X"," "," "," "," ","X"," ","X","X","X","X","X"," "," "," "," ","X"," ","X"},
+						   {"X"," ","X","X"," ","X"," "," "," ","X","X"," ","X"," ","X","X","X"," ","X"," "," "," ","X","X","X","X"," ","X"},
+						   {"X"," ","X"," "," ","X"," ","X"," "," "," "," ","X"," "," "," "," "," "," "," ","X","X","X"," "," "," "," ","X"},
+						   {"X"," ","X","X","X","X"," ","X","X","X","X","X","X","X","X","X","X","X","X"," "," "," "," "," ","X"," ","X","X"},
+						   {"X"," "," "," "," "," "," ","X"," "," ","X"," ","X"," "," "," ","X"," ","X","X","X"," ","X","X","X"," ","X"," "},
+						   {"X","X","X"," ","X","X","X","X"," ","X","X"," ","X","X","X"," ","X"," "," "," ","X"," "," "," "," "," ","X"," "},
+						   {" "," ","X"," ","X"," "," "," "," "," "," "," "," "," ","X"," ","X"," ","X"," ","X","X","X","X"," ","X","X"," "},
+						   {" ","X","X"," ","X"," ","X","X","X"," ","X","X","X"," ","X"," "," "," ","X","X","X"," "," ","X"," "," ","X"," "},
+						   {" "," ","X"," ","X"," ","X"," "," "," ","X"," "," "," ","X"," ","X"," "," "," "," "," "," ","X","X","X","X"," "},
+						   {" "," "," "," "," "," ","X"," ","X","X","X","X","X","X","X"," ","X","X","X","X","X","X"," ","X"," "," "," "," "},
+						   {" ","X"," "," ","X"," ","X"," "," "," "," "," ","X"," "," "," "," "," ","X"," "," "," "," ","X"," "," ","X"," "},
+						   {" ","X","X","X","X"," ","X"," ","X","X","X"," ","X"," ","X","X","X"," ","X","X","X"," ","X","X","X","X","X"," "},
+						   {" "," "," "," ","X"," "," "," ","X"," "," "," "," "," ","X"," "," "," "," "," ","X"," "," "," "," "," "," "," "}
+						   
+						   
+						  };
+		
+		for (int i=0; i<18 ; i++) {
+			for (int j = 0 ; j<28; j++) {
+				if (lab[i][j].equals("X")) {
+					this.cases.add(new Mur(((j+1)*30)+15,((i+1)*30)+15));
+				}
+			}
+		}
+		
 		for (int y=15; y<600 ; y+=30) {
 			this.cases.add(new Mur(15, y));
 		}
@@ -27,23 +58,6 @@ public class Jeu implements JeuAbstract {
 		for (int i=15; i<900 ; i+=30) {
 			this.cases.add(new Mur(i, 585));
 		}
-		
-		
-		this.cases.add(new Mur(45,75));
-		this.cases.add(new Mur(45,225));
-		this.cases.add(new Mur(75,225));
-		this.cases.add(new Mur(105,225));
-		this.cases.add(new Mur(105,255));
-		
-		this.cases.add(new Mur(585,255));
-		this.cases.add(new Mur(555,255));
-		this.cases.add(new Mur(525,255));
-		this.cases.add(new Mur(495,255));
-		this.cases.add(new Mur(365,255));
-		this.cases.add(new Mur(365,225));
-		this.cases.add(new Mur(365,195));
-		
-		this.cases.add(new Escalier(45,45));
 		
 	}
 	
@@ -75,6 +89,10 @@ public class Jeu implements JeuAbstract {
 
 	public Player getPlayer() {
 		return p1;
+	}
+	
+	public ArrayList<Case> getCases() {
+		return this.cases;
 	}
 	
 }
