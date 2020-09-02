@@ -10,7 +10,11 @@ import moteurJeu.moteur.JeuAbstract;
 public class Jeu implements JeuAbstract {
 	
 	ArrayList<Case> cases; 
-	Player p1 = new Player(450,300,10);
+	
+	int spawnX = 465;
+	int spawnY = 45;
+	int vitesse = 4;
+	Player p1 = new Player(spawnX, spawnY, vitesse);
 	
 	public Jeu() {
 		// Creation du labyrinthe par defaut

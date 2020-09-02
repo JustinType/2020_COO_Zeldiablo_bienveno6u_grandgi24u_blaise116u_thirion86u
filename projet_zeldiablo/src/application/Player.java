@@ -49,6 +49,5 @@ public class Player {
 		if (this.yVel > 0) {this.yVel-=1;}
 		if (this.yVel < 0) {this.yVel+=1;}
 		
-		System.out.println(this.xVel);
-		}
+	}
 }
