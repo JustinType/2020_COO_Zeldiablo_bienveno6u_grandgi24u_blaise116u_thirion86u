@@ -65,18 +65,19 @@ public class Jeu implements JeuAbstract {
 	public String evoluer(CClavier clavier, CSouris souris) {
 		
 		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
-			p1.seDeplacer("right");
+			p1.direction("right");
 		}
 		if(clavier.isPressed(KeyEvent.VK_LEFT)) { 
-			p1.seDeplacer("left");
+			p1.direction("left");
 		}
 		if(clavier.isPressed(KeyEvent.VK_UP)) {
-			p1.seDeplacer("up");
+			p1.direction("up");
 		}
 		if(clavier.isPressed(KeyEvent.VK_DOWN)) {
-			p1.seDeplacer("down");
+			p1.direction("down");
 		}
-
+		p1.seDeplacer();
+		p1.reduceVel();
 		
 		return ("");
 	}
