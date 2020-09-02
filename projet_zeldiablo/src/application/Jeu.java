@@ -14,7 +14,7 @@ public class Jeu implements JeuAbstract {
 	
 	public Jeu() {
 		// Creation du labyrinthe par defaut
-		this.cases = new ArrayList<>();
+		this.cases = new ArrayList<>(); 
 		
 		String[][] lab = { {" "," "," "," "," ","X"," "," "," ","X"," "," "," ","X"," ","X","X"," "," "," ","X"," "," "," "," "," "," ","X"},
 						   {" ","X","X","X","X","X"," ","X"," ","X"," ","X"," ","X"," "," ","X"," ","X"," ","X"," ","X","X","X","X"," ","X"},
