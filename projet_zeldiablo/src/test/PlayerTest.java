@@ -12,13 +12,13 @@ class PlayerTest {
 	
 	@Test
 	void testSeDeplacerDroite() {
-		p1.seDeplacer("right");
+		p1.direction("right");
 		assertEquals("le Personnage aurais du se deplacer de sa vitesse vers la droite",410,p1.getX());
 	}
 	
 	@Test
 	void testSeDeplacerGauche() {
-		p1.seDeplacer("left");
+		p1.direction("left");
 		assertEquals("le Personnage aurais du se deplacer de sa vitesse vers la left",390,p1.getX());
 	}
 	
