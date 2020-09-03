@@ -1,6 +1,6 @@
 -Création d'un labyrinthe par défaut
 -Plusieurs étages
--Différentes cases (vide / piégées / murs / escaliers)
+-Différentes cases (vide / piégées / murs / escaliers) --> multi étages
 -Création d'un personnage de base
 -Personnage peut se déplacer sur toutes les cases sauf murs
 -Création de monstres

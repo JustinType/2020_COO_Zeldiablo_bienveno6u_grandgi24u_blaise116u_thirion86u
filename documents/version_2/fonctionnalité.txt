@@ -1,4 +1,4 @@
-Fonctionnalité 1 :[Inertie du Joueur]
+Fonctionnalité 1 : [Inertie du Joueur]
 responsable: switch-bls
 
 Implementé la notion d'inertie dans les deplacements du joueur pour rentre l'animation plus realiste
@@ -7,14 +7,82 @@ Critères de validations:
 -Inertie Règlable
 -ne gène pas les deplacements
 
-Fonctionnalité 2 :[Collisions]
-responsable: switch-bls
+Fonctionnalité 2 : [Collisions]
+responsable: switch-bls / thirion86u
 
 Rendre les murs intenjibles
 
 Critères de validations:
 -Collisions stables
--ne gène pas les deplacements
+-Ne gène pas les deplacements
 
 
+Fonctionnalité 3 : [Case Victoire]
+Responsable : bienveno6
 
+Lorsque le personnage atteint cette case le jeu se fini
+
+Critères de validations:
+-
+-
+
+
+Fonctionnalité 4 : [Case Piège]
+Responsable : thirion86u
+
+Lorsque le personnage atteint cette case il perd un point de vie et la case disparait
+
+Critères de validations:
+-
+-
+
+
+Fonctionnalité 5 : [Système de points de vie]
+Responsable : thirion86u
+
+Le personnage a maintenant des points de vie
+
+Critères de validations:
+-
+-
+
+
+Fonctionnalité 6 : [Affichage de la vie]
+Responsable : thirion86u
+
+Affichage en temps réel de la vie du personnage
+
+Critères de validations:
+-
+-
+
+
+Fonctionnalité 7 : [Case Escalier]
+Responsable : grandgi24u
+
+Lorsque le personnage atteint cette case un nouveau labyrinthe apparait
+
+Critères de validations:
+-
+-
+
+
+Fonctionnalité 8 : [Multi-Etage]
+Responsable : grandgi24u
+
+Plusieurs niveaux de labyrinthe disponibles
+
+Critères de validations:
+-
+-
+
+
+Fonctionnalité 9 : [Ecran de Victoire ou de Mort]
+Responsable : bienveno6
+
+Lorsque le personnage atteint la case victoire affiche l'écran de Victoire
+Lorsque le personnage tombe à 0 points de vie affiche l'écran de Mort
+
+Critères de validations:
+-
+-
