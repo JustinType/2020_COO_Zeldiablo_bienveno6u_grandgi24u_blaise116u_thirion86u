@@ -18,4 +18,6 @@ public interface DessinAbstract {
 	 */
 	public abstract void dessiner(BufferedImage image);
 
+	void repaint();
+
 }

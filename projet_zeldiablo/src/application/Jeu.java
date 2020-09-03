@@ -15,6 +15,7 @@ public class Jeu implements JeuAbstract {
 	int spawnY = 45;
 	int vitesse = 3;
 	Player p1 = new Player(spawnX, spawnY, vitesse);
+	private Boolean collisionEscalier = false;
 	
 	public Jeu() {
 		// Creation du labyrinthe par defaut
@@ -27,8 +28,8 @@ public class Jeu implements JeuAbstract {
 						   {" ","X"," ","X"," "," "," ","X"," "," "," ","X","X","X","X"," ","X"," "," "," ","X","X"," ","X"," "," "," "," "},
 						   {" "," "," "," "," ","X","X","X","X","X"," "," "," "," ","X"," ","X","X","X","X","X"," "," "," "," ","X","X"," "},
 						   {" ","X","X","X"," ","X"," "," "," ","X","X"," ","X"," ","X","X","X"," ","X"," "," "," ","X","X","X","X"," "," "},
-						   {" ","X","P"," "," ","X"," ","X"," "," "," "," ","X"," "," "," "," "," "," "," ","X","X","X"," "," "," "," ","X"},
-						   {" ","X","X","X","X","X"," ","X","X","X","X","X","X","X","X","X","X","X","X"," "," "," "," "," ","X"," ","X","X"},
+						   {" ","X","P"," "," ","X"," ","X"," "," "," "," ","X"," "," "," "," "," "," "," ","X","X","X"," "," "," "," "," "},
+						   {" ","X","X","X","X","X"," ","X","X","X","X","X","X","X","X","X","X","X","X"," "," "," "," "," ","X"," ","X"," "},
 						   {" "," "," "," "," "," "," ","X"," "," ","X"," ","X","V"," "," ","X"," ","X","X","X"," ","X","X","X"," ","X","E"},
 						   {"X","X","X"," ","X","X","X","X"," ","X","X"," ","X","X","X"," ","X"," "," "," ","X"," "," "," "," "," ","X"," "},
 						   {" "," ","X"," ","X"," "," "," "," "," "," "," "," "," ","X"," ","X"," ","X"," ","X","X","X","X"," ","X","X"," "},
@@ -75,7 +76,15 @@ public class Jeu implements JeuAbstract {
 	
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
-		
+		if(this.p1.getX() > 840 && this.p1.getX() < 870) {
+			if(this.p1.getY() > 300 && this.p1.getY() < 330) {
+				this.collisionEscalier = true;
+			}else {
+				this.collisionEscalier = false;
+			}
+		}else {
+			this.collisionEscalier = false;
+		}
 		if(clavier.isPressed(KeyEvent.VK_RIGHT)) {
 			p1.direction("right");
 		}
@@ -107,6 +116,10 @@ public class Jeu implements JeuAbstract {
 	
 	public ArrayList<Case> getCases() {
 		return this.cases;
+	}
+	
+	public Boolean getcollisionEscalier() {
+		return this.collisionEscalier;
 	}
 	
 }
