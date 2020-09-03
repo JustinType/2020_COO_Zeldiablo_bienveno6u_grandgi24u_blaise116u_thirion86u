@@ -15,7 +15,7 @@ public class Jeu implements JeuAbstract {
 	int spawnY = 45;
 	int vitesse = 3;
 	Player p1 = new Player(spawnX, spawnY, vitesse);
-	private Boolean collisionEscalier = false;
+	private Boolean collisionEscalier = false; 
 	private Boolean etremonter = false;
 
 	public Jeu() {
