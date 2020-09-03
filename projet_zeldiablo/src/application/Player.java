@@ -13,6 +13,7 @@ public class Player {
 	private String direction;
 	private Effect effet;
 	private boolean piege;
+	private boolean shrek;
 	
 	public Player(int posX,int posY,int vitesse) {
 		this.x = posX;
@@ -23,6 +24,7 @@ public class Player {
 		this.setVie(10);
 		this.direction="megaman";
 		this.piege=false;
+		this.setShrek(false);
 	}
 	
 	
@@ -77,6 +79,9 @@ public class Player {
 			}
 			else if (collision(c,xv,yv) && c.getSprite()=="rapide") {
 				this.effet = new Effect(60,10);;
+			}
+			else if (collision(c,xv,yv) && c.getSprite()=="case_5_4") {
+				this.shrek = true;
 			}
 		}
 	}
@@ -134,5 +139,15 @@ public class Player {
 	
 	public void setPiege(boolean p) {
 		this.piege=p;
+	}
+
+
+	public boolean isShrek() {
+		return shrek;
+	}
+
+
+	public void setShrek(boolean shrek) {
+		this.shrek = shrek;
 	}
 }

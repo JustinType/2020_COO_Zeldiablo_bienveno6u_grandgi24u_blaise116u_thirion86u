@@ -46,6 +46,8 @@ public class Jeu implements JeuAbstract {
 					this.cases.add(new Rapide(((j+1)*30)+15,((i+1)*30)+15));
 				}else if(lab[i][j].contentEquals("L")) {
 					this.cases.add(new Lent(((j+1)*30)+15,((i+1)*30)+15));
+				}else if(lab[i][j].contentEquals("S")) {
+					this.cases.add(new CaseShrek(((j+1)*30)+15,((i+1)*30)+15));
 				}
 			}
 		}
@@ -91,6 +93,8 @@ public class Jeu implements JeuAbstract {
 					this.cases2.add(new Rapide(((j+1)*30)+15,((i+1)*30)+15));
 				}else if(lab2[i][j].contentEquals("L")) {
 					this.cases2.add(new Lent(((j+1)*30)+15,((i+1)*30)+15));
+				}else if(lab2[i][j].contentEquals("S")) {
+					this.cases.add(new CaseShrek(((j+1)*30)+15,((i+1)*30)+15));
 				}
 			}
 		}

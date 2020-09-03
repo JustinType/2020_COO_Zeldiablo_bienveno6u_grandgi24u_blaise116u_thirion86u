@@ -26,9 +26,10 @@ public class Dessin implements DessinAbstract {
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);	
 		Sprites.chargerImage("megamort", "images/megaman-mort.png");
 		Sprites.chargerImage("megagauche", "images/megaman-gauche.png");
-		Sprites.chargerImage("Shrek", "images/monstre.png");
+		Sprites.chargerImage("monstre", "images/monstre.png");
 		Sprites.chargerImage("lent", "images/lent.png");
 		Sprites.chargerImage("rapide", "images/rapide.png");
+		Sprites.chargerImage("Shrek", "images/shrek.png");
 	}
 
 	@Override
@@ -70,13 +71,23 @@ public class Dessin implements DessinAbstract {
 				megasprite="megaman";
 			}
 			if(!this.j.getetremonter()) {
-				Sprites.dessinerCentre(g, "Shrek", m.getX(), m.getY());
-				Sprites.dessinerCentre(g, "Shrek", m2.getX(), m2.getY());
-				Sprites.dessinerCentre(g, "Shrek", m3.getX(), m3.getY());
+				Sprites.dessinerCentre(g, "monstre", m.getX(), m.getY());
+				Sprites.dessinerCentre(g, "monstre", m2.getX(), m2.getY());
+				Sprites.dessinerCentre(g, "monstre", m3.getX(), m3.getY());
 				m.deplacerMonstreHorizontale(435,615);
 				m2.deplacerMonstreVerticale(315, 495);
 				m3.deplacerMonstreVerticale(345, 555);
 			}
+			
+			if (this.j.getPlayer().isShrek()) {
+				g.setColor(Color.DARK_GRAY);
+				g.fillRect(0,0,900,600);
+				g.setColor(Color.WHITE);
+				Sprites.dessinerCentre(g,"Shrek",350,300);
+				g.drawString("Tu as trouvé SHREK !!!", 350, 314);
+				g.dispose();
+			}
+			
 			if(j.getPlayer().getPiege()==true) {
 				j.getPlayer().setPiege(false);
 				Sprites.dessinerCentre(g,"megamort",j.getPlayer().getX(),j.getPlayer().getY());
