@@ -12,6 +12,7 @@ public class Player {
 	private int yVel;
 	private int vitesse;
 	private boolean gagne;
+	private String direction;
 
 	
 	public Player(int posX,int posY,int vitesse) {
@@ -21,12 +22,13 @@ public class Player {
 		this.xVel = 0;
 		this.yVel = 0;
 		this.setVie(10);
+		this.direction="megaman";
 	}
 	
 	
 	public void direction(String sens) {
-		if(sens.equals("right")) {this.xVel = this.vitesse;}
-		if(sens.equals("left")) {this.xVel = -this.vitesse;}
+		if(sens.equals("right")) {this.xVel = this.vitesse;this.direction="droite";}
+		if(sens.equals("left")) {this.xVel = -this.vitesse;this.direction="gauche";}
 		if(sens.equals("up")) {this.yVel = -this.vitesse;}
 		if(sens.equals("down")) {this.yVel = this.vitesse;}	
 		
@@ -92,5 +94,9 @@ public class Player {
 
 	public void setVie(int vie) {
 		this.vie = vie;
+	}
+	
+	public String getDirection() {
+		return this.direction;
 	}
 }
