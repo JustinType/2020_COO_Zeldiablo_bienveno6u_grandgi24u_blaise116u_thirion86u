@@ -1,30 +1,54 @@
 package application;
 
+import moteurJeu.sprite.Sprites;
+
 public class Monstre {
-	
+
 	private int x,y;
-	
-	public Monstre(int x, int y) {
+	private String sens;
+
+	public Monstre(int x, int y, String n) {
+		if(n.equals("H")) {
+			sens = "left";
+		}else {
+			sens = "up";
+		}
 		this.x = x;
 		this.y = y;
 	}
-	
-	public void deplacerMonstre(String dir) {
-		if(dir.equals("right")) {
-			for(int i = 0; i < 180; i++) {
-				this.x--;
+
+	public void deplacerMonstreHorizontale(int x1, int x2) {
+		if(sens.equals("left")) {
+			this.x--;
+			if(x <= x1) {
+				sens = "right";
 			}
 		}else {
-			for(int i = 0; i < 180; i++) {
-				this.x++;
+			this.x++;
+			if(x >= x2) {
+				sens = "left";
 			}
 		}
 	}
 	
+	public void deplacerMonstreVerticale(int y1, int y2) {
+		if(sens.equals("up")) {
+			this.y--;
+			if(y <= y1) {
+				sens = "down";
+			}
+		}else {
+			this.y++;
+			if(y >= y2) {
+				sens = "up";
+			}
+		}
+	}
+
 	public int getX() {
 		return this.x;
 	}
-	
+
 	public int getY() {
 		return this.y;
 	}

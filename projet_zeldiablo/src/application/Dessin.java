@@ -12,8 +12,12 @@ import moteurJeu.sprite.Sprites;
 
 
 public class Dessin implements DessinAbstract {
-	
+
 	Jeu j;
+	Monstre m = new Monstre(435,255,"H");
+	Monstre m2 = new Monstre(135,495," ");
+	Monstre m3 = new Monstre(855,555," ");
+
 	public Dessin(Jeu j) {
 		// charger sprites
 		this.j = j;
@@ -22,6 +26,7 @@ public class Dessin implements DessinAbstract {
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);	
 		Sprites.chargerImage("megamort", "images/megaman-mort.png");
 		Sprites.chargerImage("megagauche", "images/megaman-gauche.png");
+		Sprites.chargerImage("Shrek", "images/monstre.png");
 	}
 
 	@Override
@@ -62,10 +67,19 @@ public class Dessin implements DessinAbstract {
 			if(this.j.getPlayer().getDirection()=="droite") {
 				megasprite="megaman";
 			}
-			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());
-			g.drawString("Vie :"+j.getPlayer().getVie(),10,20);
+			if(!this.j.getetremonter()) {
+				Sprites.dessinerCentre(g, "Shrek", m.getX(), m.getY());
+				Sprites.dessinerCentre(g, "Shrek", m2.getX(), m2.getY());
+				Sprites.dessinerCentre(g, "Shrek", m3.getX(), m3.getY());
+				m.deplacerMonstreHorizontale(435,615);
+				m2.deplacerMonstreVerticale(315, 495);
+				m3.deplacerMonstreVerticale(345, 555);
 			}
+			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());				
+			g.drawString("Vie :"+j.getPlayer().getVie(),10,20);
 		}
-		
-	}	
+	}
+
+
+}	
 
