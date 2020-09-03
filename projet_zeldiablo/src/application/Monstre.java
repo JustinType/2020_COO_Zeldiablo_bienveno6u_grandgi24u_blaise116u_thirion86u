@@ -9,9 +9,16 @@ public class Monstre {
 		this.y = y;
 	}
 	
-	public void deplacerMonstre(int dx, int dy) {
-		this.x += dx;
-		this.y += dy;
+	public void deplacerMonstre(String dir) {
+		if(dir.equals("right")) {
+			for(int i = 0; i < 180; i++) {
+				this.x--;
+			}
+		}else {
+			for(int i = 0; i < 180; i++) {
+				this.x++;
+			}
+		}
 	}
 	
 	public int getX() {
