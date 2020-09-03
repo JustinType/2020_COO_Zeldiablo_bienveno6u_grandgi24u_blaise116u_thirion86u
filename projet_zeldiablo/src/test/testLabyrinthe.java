@@ -19,7 +19,7 @@ public class testLabyrinthe {
 		Jeu j = new Jeu();
 		Dessin d = new Dessin(j);
 		MoteurGraphique m = new MoteurGraphique(j, d);
-		m.lancerJeu(900, 600, 60);
+		m.lancerJeu(900, 600, 60, j, d);
 		
 		int x = j.getPlayer().getX();
 		int y = j.getPlayer().getY();
@@ -32,10 +32,11 @@ public class testLabyrinthe {
 		Jeu j = new Jeu();
 		Dessin d = new Dessin(j);
 		MoteurGraphique m = new MoteurGraphique(j, d);
-		m.lancerJeu(900, 600, 60);
+		m.lancerJeu(900, 600, 60, j, d);
 		
 		ArrayList<Case> cases = j.getCases();
 		
+		// On test si il y a bien une case tout en haut a gauche et a droite du labyrinthe
 		assertEquals("Une case devrait se trouver ici", 15, cases.get(0).getX());
 		assertEquals("Une case devrait se trouver ici", 15, cases.get(0).getY());
 	}
