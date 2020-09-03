@@ -21,7 +21,7 @@ public class CollisionsTest {
 	
 	
 	@Test
-	public void testSeDeplacerDroite() {
+	public void testCollisionsDroite() {
 		cases.add(new Mur(440, 320));
 		p1.direction("right");
 		
@@ -32,7 +32,7 @@ public class CollisionsTest {
 	}
 	
 	@Test
-	public void testSeDeplacerGauche() {
+	public void testCollisionsGauche() {
 		cases.add(new Mur(360, 320));
 		p1.direction("left");
 		for(int i = 0; i <= 10; i++) {p1.seDeplacer(cases);}
@@ -40,7 +40,7 @@ public class CollisionsTest {
 	}
 	
 	@Test
-	public void testSeDeplacerHaut() {
+	public void testCollisionsHaut() {
 		cases.add(new Mur(400, 280));
 		p1.direction("up");
 		for(int i = 0; i <= 5; i++) {p1.seDeplacer(cases);}
@@ -48,7 +48,7 @@ public class CollisionsTest {
 	}
 	
 	@Test
-	public void testSeDeplacerBas() {
+	public void testCollisionsBas() {
 		cases.add(new Mur(400, 360));
 		p1.direction("down");
 		for(int i = 0; i <= 10; i++) {p1.seDeplacer(cases);}
