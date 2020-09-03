@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import application.Case;
 import application.Jeu;
-import application.Mur;
 import application.Player;
 
 public class InertieTest {
