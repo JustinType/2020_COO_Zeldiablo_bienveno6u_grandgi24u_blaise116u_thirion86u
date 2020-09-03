@@ -2,8 +2,6 @@ package application;
 
 import java.util.ArrayList;
 
-import application.Case;
-
 public class Player {
 	private int vie;
 	private int x;
