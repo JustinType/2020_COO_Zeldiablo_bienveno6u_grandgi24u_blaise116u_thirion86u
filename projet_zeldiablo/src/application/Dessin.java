@@ -75,6 +75,11 @@ public class Dessin implements DessinAbstract {
 				m2.deplacerMonstreVerticale(315, 495);
 				m3.deplacerMonstreVerticale(345, 555);
 			}
+			if(j.getPlayer().getX() == m.getX() || j.getPlayer().getX() == m2.getX() || j.getPlayer().getX() == m3.getX()) {
+				if(j.getPlayer().getY() == m.getY() || j.getPlayer().getY() == m2.getY() || j.getPlayer().getY() == m3.getY()) {
+					j.getPlayer().setVie(j.getPlayer().getVie()-1);
+				}
+			}
 			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());				
 			g.drawString("Vie :"+j.getPlayer().getVie(),10,20);
 		}
