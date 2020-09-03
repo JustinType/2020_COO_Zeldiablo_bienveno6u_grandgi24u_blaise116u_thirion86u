@@ -3,7 +3,7 @@ responsable: switch-bls
 
 Faire se deplacer le personnage dans la carte dans toutes les directions.
 
-Critere de validation:
+Critères de validations:
 -le personnage doit pouvoire se deplacer fluidement sur la fenetre.
 -vers le haut, le bas, la droite, la gauche.
 -les diagonales doivent fonctionnées egalement.
