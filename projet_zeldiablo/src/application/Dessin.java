@@ -1,6 +1,8 @@
 package application;
 
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -12,7 +14,6 @@ import moteurJeu.sprite.Sprites;
 public class Dessin implements DessinAbstract {
 	
 	Jeu j;
-	public Graphics2D g;
 
 	public Dessin(Jeu j) {
 		// charger sprites
@@ -24,13 +25,24 @@ public class Dessin implements DessinAbstract {
 
 	@Override
 	public void dessiner(BufferedImage image) {
-		this.g=(Graphics2D)image.getGraphics();
-		
-		ArrayList<Case> cases = this.j.cases;
-		for (Case c : cases) {
-			Sprites.dessinerCentre(g, c.getSprite(), (int) c.x, (int) c.y);
+		Graphics2D g=(Graphics2D)image.getGraphics();
+		if (this.j.getPlayer().getGagne()==true) {
+			g.setColor(Color.DARK_GRAY);
+			g.fillRect(0,0,900,600);
+			g.setColor(Color.BLACK);
+			g.setFont(new Font("TimesRoman", Font.PLAIN, 20)); 
+			g.drawString("Bravo ! Vous avez fini le Labyrinthe", 380, 314);
+			Sprites.dessinerCentre(g,"megaman",350,300);
+			g.dispose();
 		}
-		Sprites.dessinerCentre(g,"megaman",j.getPlayer().getX(),j.getPlayer().getY());
+		else {
+			
+			ArrayList<Case> cases = this.j.cases;
+			for (Case c : cases) {
+				Sprites.dessinerCentre(g, c.getSprite(), (int) c.x, (int) c.y);
+			}
+			Sprites.dessinerCentre(g,"megaman",j.getPlayer().getX(),j.getPlayer().getY());
+		}
 	}
 	
 	@Override
