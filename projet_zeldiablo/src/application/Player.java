@@ -10,6 +10,7 @@ public class Player {
 	private int xVel;
 	private int yVel;
 	private int vitesse;
+	private boolean gagne;
 
 	
 	public Player(int posX,int posY,int vitesse) {
@@ -51,6 +52,11 @@ public class Player {
 				if (yv > 0) {this.y = c.getY()-30;}
 				if (yv < 0) {this.y = c.getY()+30;}	
 			}	
+			else if (collision(c,xv,yv) && c.getSprite()=="case_0_2") {
+				System.out.println("Victoire");
+				this.gagne=true;
+				System.out.println(getGagne());
+			}
 		}
 	}
 	
@@ -69,4 +75,10 @@ public class Player {
 		if (this.yVel < 0) {this.yVel+=1;}
 		
 	}
+	
+	public boolean getGagne() {
+		return this.gagne;
+	}
+	
+	
 }
