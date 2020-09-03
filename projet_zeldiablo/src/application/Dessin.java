@@ -17,10 +17,11 @@ public class Dessin implements DessinAbstract {
 	public Dessin(Jeu j) {
 		// charger sprites
 		this.j = j;
-		Sprites.chargerImage("megaman", "images/monstre.png");
+		Sprites.chargerImage("megaman", "images/megaman.png");
 		Sprites.chargerImage("escalier", "images/escalier.png");
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);	
 		Sprites.chargerImage("megamort", "images/megaman-mort.png");
+		Sprites.chargerImage("megagauche", "images/megaman-gauche.png");
 	}
 
 	@Override
@@ -30,7 +31,6 @@ public class Dessin implements DessinAbstract {
 			g.setColor(Color.DARK_GRAY);
 			g.fillRect(0,0,900,600);
 			g.setColor(Color.BLACK);
-			g.setFont(new Font("TimesRoman", Font.PLAIN, 20)); 
 			g.drawString("Bravo ! Vous avez fini le Labyrinthe", 380, 314);
 			Sprites.dessinerCentre(g,"megaman",350,300);
 			g.dispose();
@@ -39,7 +39,7 @@ public class Dessin implements DessinAbstract {
 			g.setColor(Color.RED);
 			g.fillRect(0, 0, 900, 600);
 			g.setColor(Color.BLACK);
-			g.drawString("Vous �tes mort, GAME OVER", 380, 300);
+			g.drawString("Vous etes mort, GAME OVER", 380, 300);
 			Sprites.dessinerCentre(g,"megamort",350,290);
 			g.dispose();
 		}
@@ -55,9 +55,17 @@ public class Dessin implements DessinAbstract {
 			for (Case c : cases) {
 				Sprites.dessinerCentre(g, c.getSprite(), (int) c.x, (int) c.y);
 			}
-			Sprites.dessinerCentre(g,"megaman",j.getPlayer().getX(),j.getPlayer().getY());
-			g.drawString("Vie :"+j.getPlayer().getVie(), 10, 20);
+			String megasprite="megaman";
+			if (this.j.getPlayer().getDirection()=="gauche") {
+				megasprite="megagauche";
+			}
+			if(this.j.getPlayer().getDirection()=="droite") {
+				megasprite="megaman";
+			}
+			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());
+			g.drawString("Vie :"+j.getPlayer().getVie(),10,20);
+			}
 		}
-	}
-	
-}
+		
+	}	
+
