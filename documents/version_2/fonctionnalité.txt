@@ -63,8 +63,9 @@ Responsable : grandgi24u
 Lorsque le personnage atteint cette case un nouveau labyrinthe apparait
 
 Critères de validations:
--
--
+- Detection du personnage aux bonnes coordonnées
+- Suppression de l'ancien labyrinthe et de ces elements
+- Créations et affichages du deuxieme labyrinthe.
 
 
 Fonctionnalité 8 : [Multi-Etage]
@@ -73,8 +74,8 @@ Responsable : grandgi24u
 Plusieurs niveaux de labyrinthe disponibles
 
 Critères de validations:
--
--
+- Affichages des différents labyrinthe
+- Contrôles et deplacement dans le deuxieme labyrinthe toujours possible
 
 
 Fonctionnalité 9 : [Ecran de Victoire ou de Mort]
