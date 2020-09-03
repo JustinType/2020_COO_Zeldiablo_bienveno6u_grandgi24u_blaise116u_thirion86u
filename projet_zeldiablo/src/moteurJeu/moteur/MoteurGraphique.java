@@ -104,11 +104,6 @@ public class MoteurGraphique {
 
 			beforeTime = System.nanoTime();
 			nbIteration++;
-			if(j.getcollisionEscalier()) {
-			
-				d.repaint();
-
-			}
 		}
 
 		long l2 = System.currentTimeMillis();

@@ -14,7 +14,7 @@ import moteurJeu.sprite.Sprites;
 public class Dessin implements DessinAbstract {
 	
 	Jeu j;
-
+	
 	public Dessin(Jeu j) {
 		// charger sprites
 		this.j = j;
@@ -44,8 +44,14 @@ public class Dessin implements DessinAbstract {
 			Sprites.dessinerCentre(g,"megamort",350,290);
 			g.dispose();
 		}
+		else if(this.j.getcollisionEscalier()) {
+			for (Case c : j.cases) {
+				c.setSprite("case_5_4");
+				c.setRempli(false);
+			}
+			this.j.setCases(this.j.creerLab2());
+		}
 		else {
-			
 			ArrayList<Case> cases = this.j.cases;
 			for (Case c : cases) {
 				Sprites.dessinerCentre(g, c.getSprite(), (int) c.x, (int) c.y);
@@ -55,13 +61,4 @@ public class Dessin implements DessinAbstract {
 		}
 	}
 	
-	@Override
-	public void repaint() {
-		for (Case c : j.cases) {
-			c.setSprite("case_5_4");
-			c.setRempli(false);
-		}
-		
-		System.out.println("Escalier3");
-	}
 }
