@@ -10,6 +10,7 @@ import application.Case;
 import application.Jeu;
 import application.Mur;
 import application.Player;
+import application.Victoire;
 
 public class CollisionsTest {
 
@@ -53,5 +54,13 @@ public class CollisionsTest {
 		p1.direction("down");
 		for(int i = 0; i <= 10; i++) {p1.seDeplacer(cases);}
 		assertEquals("le Personnage aurais du se deplacer de sa vitesse vers le bas",330,p1.getY());
+	}
+	
+	@Test
+	public void testDetectionArrive() {
+		cases.add(new Victoire (400,340));
+		p1.direction("right");
+		p1.seDeplacer(cases);
+		assertEquals("le personnage aurait du gagner",true,p1.getGagne());
 	}
 }
