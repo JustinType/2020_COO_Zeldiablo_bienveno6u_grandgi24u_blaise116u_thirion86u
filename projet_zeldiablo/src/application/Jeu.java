@@ -58,7 +58,7 @@ public class Jeu implements JeuAbstract {
 	public ArrayList<Case> creerLab2() {
 		this.cases2 = new ArrayList<>();
 		
-		String[][] lab2 = m.getLab();
+		String[][] lab2 = m.getLab2();
 
 		for (int i=0; i<18 ; i++) {
 			for (int j = 0 ; j<28; j++) {
