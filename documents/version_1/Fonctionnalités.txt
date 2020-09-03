@@ -1,4 +1,4 @@
-fonctionnalité 1 : [Se Deplacer]
+Fonctionnalité 1 : [Se Deplacer]
 responsable: switch-bls
 
 Faire se deplacer le personnage dans la carte dans toutes les directions.
@@ -25,3 +25,12 @@ Un personnage apparaît au milieu du labyrinthe
 Critères de validations :
 -Le personnage est bien au milieu du labyrinthe
 -Le personnage apparaît
+
+
+Fonctionnalité 4 : [Utilisation de Sprite]
+Responsable : thirion86u
+
+Le personnage et les cases du labyrinthe sont représentés grâce à des sprites
+
+Critères de validations :
+-Les sprites apparaissent
