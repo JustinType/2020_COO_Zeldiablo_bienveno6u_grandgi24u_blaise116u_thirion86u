@@ -14,7 +14,6 @@ import moteurJeu.sprite.Sprites;
 public class Dessin implements DessinAbstract {
 	
 	Jeu j;
-	
 	public Dessin(Jeu j) {
 		// charger sprites
 		this.j = j;
