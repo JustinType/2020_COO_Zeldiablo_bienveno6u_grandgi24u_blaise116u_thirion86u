@@ -27,6 +27,8 @@ public class Dessin implements DessinAbstract {
 		Sprites.chargerImage("megamort", "images/megaman-mort.png");
 		Sprites.chargerImage("megagauche", "images/megaman-gauche.png");
 		Sprites.chargerImage("Shrek", "images/monstre.png");
+		Sprites.chargerImage("lent", "images/lent.png");
+		Sprites.chargerImage("rapide", "images/rapide.png");
 	}
 
 	@Override

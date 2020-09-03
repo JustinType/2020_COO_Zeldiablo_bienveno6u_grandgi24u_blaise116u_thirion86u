@@ -11,7 +11,7 @@ public class Player {
 	private int vitesse;
 	private boolean gagne;
 	private String direction;
-
+	private Effect effet;
 	
 	public Player(int posX,int posY,int vitesse) {
 		this.x = posX;
@@ -69,9 +69,26 @@ public class Player {
 					this.x = 765;
 					this.y = 345;
 				}
+			}else if (collision(c,xv,yv) && c.getSprite()=="lent") {
+				this.effet = new Effect(240,1);
+			}
+			else if (collision(c,xv,yv) && c.getSprite()=="rapide") {
+				this.effet = new Effect(60,10);;
 			}
 		}
 	}
+	
+	public void doEffect() {
+		if (effet != null) {
+			System.out.println("effet");
+			if(this.effet.increseTime()) {	
+				this.vitesse = this.effet.getVitesse();
+			}else {
+				this.effet = null;
+				this.vitesse = 3;
+			}}
+		}
+	
 	
 	public int getX() {
 		return this.x;
