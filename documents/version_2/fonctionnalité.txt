@@ -33,8 +33,8 @@ Responsable : thirion86u
 Lorsque le personnage atteint cette case il perd un point de vie et la case disparait
 
 Critères de validations:
--
--
+-Lorsque le personnage rentre en collision il perd un point de vie
+-Sinon il a toute sa vie
 
 
 Fonctionnalité 5 : [Système de points de vie]
@@ -43,8 +43,8 @@ Responsable : thirion86u
 Le personnage a maintenant des points de vie
 
 Critères de validations:
--
--
+-On peut modifier le nombre de points de vie du personnage
+-Le personnage commence avec 10 points de vie
 
 
 Fonctionnalité 6 : [Affichage de la vie]
@@ -53,8 +53,7 @@ Responsable : thirion86u
 Affichage en temps réel de la vie du personnage
 
 Critères de validations:
--
--
+-La vie est affichée en temps réel
 
 
 Fonctionnalité 7 : [Case Escalier]
