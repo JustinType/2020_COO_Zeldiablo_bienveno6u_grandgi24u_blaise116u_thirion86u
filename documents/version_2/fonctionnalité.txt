@@ -1,0 +1,20 @@
+Fonctionnalité 1 :[Inertie du Joueur]
+responsable: switch-bls
+
+Implementé la notion d'inertie dans les deplacements du joueur pour rentre l'animation plus realiste
+
+Critères de validations:
+-Inertie Règlable
+-ne gène pas les deplacements
+
+Fonctionnalité 2 :[Collisions]
+responsable: switch-bls
+
+Rendre les murs intenjibles
+
+Critères de validations:
+-Collisions stables
+-ne gène pas les deplacements
+
+
+
