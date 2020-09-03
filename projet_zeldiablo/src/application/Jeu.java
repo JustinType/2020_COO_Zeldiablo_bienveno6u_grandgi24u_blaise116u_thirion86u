@@ -37,6 +37,12 @@ public class Jeu implements JeuAbstract {
 				else if(lab[i][j].contentEquals("V")) {
 					this.cases.add(new Victoire(((j+1)*30)+15,((i+1)*30)+15));
 				}
+				else if(lab[i][j].contentEquals("T")) {
+					this.cases.add(new CaseTP(((j+1)*30)+15,((i+1)*30)+15,1));
+				}
+				else if(lab[i][j].contentEquals("t")) {
+					this.cases.add(new CaseTP(((j+1)*30)+15,((i+1)*30)+15,2));
+				}
 			}
 		}
 
@@ -71,6 +77,12 @@ public class Jeu implements JeuAbstract {
 				}
 				else if(lab2[i][j].contentEquals("V")) {
 					this.cases2.add(new Victoire(((j+1)*30)+15,((i+1)*30)+15));
+				}
+				else if(lab2[i][j].contentEquals("T")) {
+					this.cases.add(new CaseTP(((j+1)*30)+15,((i+1)*30)+15,1));
+				}
+				else if(lab2[i][j].contentEquals("t")) {
+					this.cases.add(new CaseTP(((j+1)*30)+15,((i+1)*30)+15,2));
 				}
 			}
 		}

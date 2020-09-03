@@ -63,6 +63,15 @@ public class Player {
 				c.setSprite("case_5_4");
 				this.vie--;
 			}
+			else if (collision(c,xv,yv) && c.getSprite()=="case_2_3") {
+				if (((CaseTP) c).getNumero() == 1) {
+					this.x = 60;
+					this.y = 60;
+				} else {
+					this.x = 765;
+					this.y = 345;
+				}
+			}
 		}
 	}
 	
