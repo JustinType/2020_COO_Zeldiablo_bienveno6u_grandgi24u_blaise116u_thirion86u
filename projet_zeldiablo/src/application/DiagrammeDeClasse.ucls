@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="application.Case" project="projet_zeldiablo" 
     file="/projet_zeldiablo/src/application/Case.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="723" y="246"/>    
+    <position height="-1" width="-1" x="711" y="183"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="application.Dessin" project="projet_zeldiablo" 
     file="/projet_zeldiablo/src/application/Dessin.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1087" y="393"/>    
+    <position height="-1" width="-1" x="905" y="446"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="application.Jeu" project="projet_zeldiablo" 
     file="/projet_zeldiablo/src/application/Jeu.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="499" y="426"/>    
+    <position height="-1" width="-1" x="453" y="259"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <interface id="7" language="java" name="moteurJeu.moteur.DessinAbstract" project="projet_zeldiablo" 
     file="/projet_zeldiablo/src/moteurJeu/moteur/DessinAbstract.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1081" y="291"/>    
+    <position height="-1" width="-1" x="1127" y="269"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </interface>  
   <class id="9" language="java" name="moteurJeu.moteur.MoteurGraphique" project="projet_zeldiablo" 
     file="/projet_zeldiablo/src/moteurJeu/moteur/MoteurGraphique.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="741" y="523"/>    
+    <position height="-1" width="-1" x="1124" y="521"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="moteurJeu.moteur.InterfaceGraphique" project="projet_zeldiablo" 
     file="/projet_zeldiablo/src/moteurJeu/moteur/InterfaceGraphique.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1044" y="536"/>    
+    <position height="-1" width="-1" x="657" y="520"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -119,89 +119,89 @@
     </display>  
   </class>  
   <generalization id="14">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="15">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="16" name="gui">        
+        <position height="0" width="0" x="-279" y="368"/>      
+      </attribute>      
+      <multiplicity id="17" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-279" y="368"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="18">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="19" name="dessin">        
+        <position height="0" width="0" x="0" y="-69"/>      
+      </attribute>      
+      <multiplicity id="20" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="-69"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="21">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="22" name="j">        
+        <position height="0" width="0" x="-71" y="-93"/>      
+      </attribute>      
+      <multiplicity id="23" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-71" y="-93"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="25">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="15">    
+  <generalization id="26">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <association id="16">    
+  <association id="27">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="17" name="p1">        
+      <attribute id="28" name="p1">        
         <position height="0" width="0" x="-214" y="94"/>      
       </attribute>      
-      <multiplicity id="18" minimum="0" maximum="1">        
+      <multiplicity id="29" minimum="0" maximum="1">        
         <position height="0" width="0" x="-214" y="94"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <realization id="20">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <association id="21">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="22" name="j">        
-        <position height="0" width="0" x="-25" y="74"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-25" y="74"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="24">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <association id="26">    
+  <association id="30">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="27" name="cases">        
-        <position height="0" width="0" x="95" y="122"/>      
+      <attribute id="31" name="cases">        
+        <position height="0" width="0" x="83" y="59"/>      
       </attribute>      
-      <multiplicity id="28" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="95" y="122"/>      
+      <multiplicity id="32" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="83" y="59"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="30" name="gui">        
-        <position height="0" width="0" x="108" y="384"/>      
-      </attribute>      
-      <multiplicity id="31" minimum="0" maximum="1">        
-        <position height="0" width="0" x="108" y="384"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="33" name="dessin">        
-        <position height="0" width="0" x="-46" y="-47"/>      
-      </attribute>      
-      <multiplicity id="34" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-46" y="-47"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <realization id="33">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <realization id="34">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
