@@ -18,7 +18,7 @@ public class Dessin implements DessinAbstract {
 	public Dessin(Jeu j) {
 		// charger sprites
 		this.j = j;
-		Sprites.chargerImage("megaman", "images/megaman.png");
+		Sprites.chargerImage("megaman", "images/monstre.png");
 		Sprites.chargerImage("escalier", "images/escalier.png");
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);	
 		Sprites.chargerImage("megamort", "images/megaman-mort.png");
@@ -40,7 +40,7 @@ public class Dessin implements DessinAbstract {
 			g.setColor(Color.RED);
 			g.fillRect(0, 0, 900, 600);
 			g.setColor(Color.BLACK);
-			g.drawString("Vous êtes mort, GAME OVER", 380, 300);
+			g.drawString("Vous ï¿½tes mort, GAME OVER", 380, 300);
 			Sprites.dessinerCentre(g,"megamort",350,290);
 			g.dispose();
 		}
