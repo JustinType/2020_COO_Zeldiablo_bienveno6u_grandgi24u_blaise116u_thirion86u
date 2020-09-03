@@ -21,6 +21,7 @@ public class Dessin implements DessinAbstract {
 		Sprites.chargerImage("megaman", "images/megaman.png");
 		Sprites.chargerImage("escalier", "images/escalier.png");
 		Sprites.chargerFeuille("case", "images/tank_tiles.png",22,12);	
+		Sprites.chargerImage("megamort", "images/megaman-mort.png");
 	}
 
 	@Override
@@ -33,6 +34,14 @@ public class Dessin implements DessinAbstract {
 			g.setFont(new Font("TimesRoman", Font.PLAIN, 20)); 
 			g.drawString("Bravo ! Vous avez fini le Labyrinthe", 380, 314);
 			Sprites.dessinerCentre(g,"megaman",350,300);
+			g.dispose();
+		}
+		else if(this.j.getPlayer().getVie()<=0){
+			g.setColor(Color.RED);
+			g.fillRect(0, 0, 900, 600);
+			g.setColor(Color.BLACK);
+			g.drawString("Vous êtes mort, GAME OVER", 380, 300);
+			Sprites.dessinerCentre(g,"megamort",350,290);
 			g.dispose();
 		}
 		else {
