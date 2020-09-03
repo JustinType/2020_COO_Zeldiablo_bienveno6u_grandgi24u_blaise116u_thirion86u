@@ -62,5 +62,6 @@ public class CollisionsTest {
 		p1.direction("right");
 		p1.seDeplacer(cases);
 		assertEquals("le personnage aurait du gagner",true,p1.getGagne());
+		
 	}
 }
