@@ -77,6 +77,13 @@ public class Dessin implements DessinAbstract {
 				m2.deplacerMonstreVerticale(315, 495);
 				m3.deplacerMonstreVerticale(345, 555);
 			}
+			if(j.getPlayer().getPiege()==true) {
+				j.getPlayer().setPiege(false);
+				Sprites.dessinerCentre(g,"megamort",j.getPlayer().getX(),j.getPlayer().getY());
+				long start=System.nanoTime();
+				while((System.nanoTime()-start)<60);
+				Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());
+				}
 			if((j.getPlayer().getX() > m.getX()-10 && j.getPlayer().getX() < m.getX()+10)||(j.getPlayer().getX() > m2.getX()-10 && j.getPlayer().getX() < m2.getX()+10)||(j.getPlayer().getX() > m3.getX()-10 && j.getPlayer().getX() < m3.getX()+10)) {
 				if((j.getPlayer().getY() > m.getY()-10 && j.getPlayer().getY() < m.getY()+10)||(j.getPlayer().getY() > m2.getY()-10 && j.getPlayer().getY() < m2.getY()+10)||(j.getPlayer().getY() > m3.getY()-10 && j.getPlayer().getY() < m3.getY()+10)) {
 					j.getPlayer().setVie(j.getPlayer().getVie()-1);

@@ -12,6 +12,7 @@ public class Player {
 	private boolean gagne;
 	private String direction;
 	private Effect effet;
+	private boolean piege;
 	
 	public Player(int posX,int posY,int vitesse) {
 		this.x = posX;
@@ -21,6 +22,7 @@ public class Player {
 		this.yVel = 0;
 		this.setVie(10);
 		this.direction="megaman";
+		this.piege=false;
 	}
 	
 	
@@ -60,6 +62,7 @@ public class Player {
 			else if (collision(c,xv,yv) && c.getSprite()=="case_12_9") {
 				c.setSprite("case_5_4");
 				this.vie--;
+				this.piege=true;
 			}
 			else if (collision(c,xv,yv) && c.getSprite()=="case_2_3") {
 				if (((CaseTP) c).getNumero() == 1) {
@@ -122,5 +125,14 @@ public class Player {
 	
 	public String getDirection() {
 		return this.direction;
+	}
+	
+
+	public boolean getPiege() {
+		return this.piege;
+	}
+	
+	public void setPiege(boolean p) {
+		this.piege=p;
 	}
 }
