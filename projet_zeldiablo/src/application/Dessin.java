@@ -82,7 +82,8 @@ public class Dessin implements DessinAbstract {
 			}
 			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());				
 			g.drawString("Vie :"+j.getPlayer().getVie(),10,20);
-		}
+		} 
+		
 	}
 
 
