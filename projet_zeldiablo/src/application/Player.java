@@ -53,7 +53,6 @@ public class Player {
 				if (yv < 0) {this.y = c.getY()+30;}	
 			}	
 			else if (collision(c,xv,yv) && c.getSprite()=="case_0_2") {
-				System.out.println("Victoire");
 				this.gagne=true;
 				System.out.println(getGagne());
 			}
