@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import application.Case;
 
 public class Player {
+	private int vie;
 	private int x;
 	private int y;
 	private int xVel;
@@ -19,6 +20,7 @@ public class Player {
 		this.vitesse = vitesse;
 		this.xVel = 0;
 		this.yVel = 0;
+		this.setVie(10);
 	}
 	
 	
@@ -54,7 +56,10 @@ public class Player {
 			}	
 			else if (collision(c,xv,yv) && c.getSprite()=="case_0_2") {
 				this.gagne=true;
-				System.out.println(getGagne());
+			}
+			else if (collision(c,xv,yv) && c.getSprite()=="case_12_9") {
+				c.setSprite("case_5_4");
+				this.vie--;
 			}
 		}
 	}
@@ -78,6 +83,14 @@ public class Player {
 	public boolean getGagne() {
 		return this.gagne;
 	}
-	
-	
+
+
+	public int getVie() {
+		return vie;
+	}
+
+
+	public void setVie(int vie) {
+		this.vie = vie;
+	}
 }

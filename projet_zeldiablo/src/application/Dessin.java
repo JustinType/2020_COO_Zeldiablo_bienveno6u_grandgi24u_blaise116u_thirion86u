@@ -12,6 +12,7 @@ import moteurJeu.sprite.Sprites;
 public class Dessin implements DessinAbstract {
 	
 	Jeu j;
+	public Graphics2D g;
 
 	public Dessin(Jeu j) {
 		// charger sprites
@@ -23,7 +24,7 @@ public class Dessin implements DessinAbstract {
 
 	@Override
 	public void dessiner(BufferedImage image) {
-		Graphics2D g=(Graphics2D)image.getGraphics();
+		this.g=(Graphics2D)image.getGraphics();
 		
 		ArrayList<Case> cases = this.j.cases;
 		for (Case c : cases) {
@@ -31,6 +32,14 @@ public class Dessin implements DessinAbstract {
 		}
 		Sprites.dessinerCentre(g,"megaman",j.getPlayer().getX(),j.getPlayer().getY());
 	}
-
-
+	
+	@Override
+	public void repaint() {
+		for (Case c : j.cases) {
+			c.setSprite("case_5_4");
+			c.setRempli(false);
+		}
+		
+		System.out.println("Escalier3");
+	}
 }

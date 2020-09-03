@@ -16,6 +16,8 @@ public abstract class Case {
 	public int getX(){return this.x;}
 	public int getY(){return this.y;}
 	public String getSprite() {return this.sprite;}
+	public void setSprite(String sprite) {this.sprite = sprite;}
 	public boolean getRempli() { return this.rempli; }
+	public void setRempli(boolean rempli) {this.rempli = rempli;}
 
 }

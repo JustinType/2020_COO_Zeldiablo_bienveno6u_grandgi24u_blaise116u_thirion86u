@@ -1,5 +1,8 @@
 package moteurJeu.moteur;
 
+import application.Dessin;
+import application.Jeu;
+
 /**
  * classe MoteurGraphique represente un moteur de jeu generique.
  * 
@@ -10,7 +13,7 @@ public class MoteurGraphique {
 	/**
 	 * le jeu a executer
 	 */
-	private JeuAbstract jeu;
+	private Jeu jeu;
 
 	/**
 	 * l'interface graphique
@@ -30,7 +33,7 @@ public class MoteurGraphique {
 	 * @param pAffiche
 	 *            afficheur a utiliser
 	 */
-	public MoteurGraphique(JeuAbstract pJeu, DessinAbstract pAffiche) {
+	public MoteurGraphique(Jeu pJeu, DessinAbstract pAffiche) {
 		// creation du jeu
 		this.jeu = pJeu;
 		this.dessin = pAffiche;
@@ -58,7 +61,7 @@ public class MoteurGraphique {
 		}
 	}
 
-	public void lancerJeu(int width, int height, int fps) {
+	public void lancerJeu(int width, int height, int fps, Jeu j, Dessin d) {
 
 		// creer interface graphique
 		creerInterface(width, height);
@@ -101,6 +104,11 @@ public class MoteurGraphique {
 
 			beforeTime = System.nanoTime();
 			nbIteration++;
+			if(j.getcollisionEscalier()) {
+			
+				d.repaint();
+
+			}
 		}
 
 		long l2 = System.currentTimeMillis();
