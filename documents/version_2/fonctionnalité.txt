@@ -23,8 +23,7 @@ Responsable : bienveno6
 Lorsque le personnage atteint cette case le jeu se fini
 
 Critères de validations:
--
--
+- on renvoie un booleen (initialisé a false) qui affiche bien true lorsqu'on arrive sur la case
 
 
 Fonctionnalité 4 : [Case Piège]
@@ -84,5 +83,5 @@ Lorsque le personnage atteint la case victoire affiche l'écran de Victoire
 Lorsque le personnage tombe à 0 points de vie affiche l'écran de Mort
 
 Critères de validations:
--
--
+- Lorsqu'il marche sur la bonne case, un écran s'affiche pour indiquer la victoire
+- Lorsqu'il n'a plus de point de vie, un écran s'affiche pour indiquer la défaite
