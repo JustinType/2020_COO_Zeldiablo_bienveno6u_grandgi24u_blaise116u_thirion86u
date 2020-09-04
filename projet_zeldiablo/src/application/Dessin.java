@@ -17,6 +17,9 @@ public class Dessin implements DessinAbstract {
 	Monstre m = new Monstre(435,255,"H");
 	Monstre m2 = new Monstre(135,495," ");
 	Monstre m3 = new Monstre(855,555," ");
+	Monstre m4 = new Monstre(855,285," ");
+	Monstre m5 = new Monstre(345,375," ");
+	Monstre m6 = new Monstre(225,255," ");
 
 	public Dessin(Jeu j) {
 		// charger sprites
@@ -77,6 +80,13 @@ public class Dessin implements DessinAbstract {
 				m.deplacerMonstreHorizontale(435,615);
 				m2.deplacerMonstreVerticale(315, 495);
 				m3.deplacerMonstreVerticale(345, 555);
+			}else {
+				Sprites.dessinerCentre(g, "monstre", m4.getX(), m4.getY());
+				Sprites.dessinerCentre(g, "monstre", m5.getX(), m5.getY());
+				Sprites.dessinerCentre(g, "monstre", m6.getX(), m6.getY());
+				m4.deplacerMonstreHorizontale(675,855);
+				m5.deplacerMonstreVerticale(165, 375);
+				m6.deplacerMonstreHorizontale(105, 225);
 			}
 			
 			if (this.j.getPlayer().isShrek()) {
@@ -97,7 +107,7 @@ public class Dessin implements DessinAbstract {
 				}
 			if((j.getPlayer().getX() > m.getX()-10 && j.getPlayer().getX() < m.getX()+10)||(j.getPlayer().getX() > m2.getX()-10 && j.getPlayer().getX() < m2.getX()+10)||(j.getPlayer().getX() > m3.getX()-10 && j.getPlayer().getX() < m3.getX()+10)) {
 				if((j.getPlayer().getY() > m.getY()-10 && j.getPlayer().getY() < m.getY()+10)||(j.getPlayer().getY() > m2.getY()-10 && j.getPlayer().getY() < m2.getY()+10)||(j.getPlayer().getY() > m3.getY()-10 && j.getPlayer().getY() < m3.getY()+10)) {
-					j.getPlayer().setVie(j.getPlayer().getVie()-1);
+					//j.getPlayer().setVie(j.getPlayer().getVie()-1);
 				}
 			}
 			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());				
