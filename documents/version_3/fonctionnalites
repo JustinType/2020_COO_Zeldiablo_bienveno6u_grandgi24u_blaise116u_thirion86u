@@ -9,10 +9,12 @@ Critères de validations:
 Fonctionnalité 2 : [Case Shrek (EasterEgg)]
 responsable: thirion86u
 
-
+Case invisible qui affiche un écran avec Shrek lorsque le personnage la trouve
 
 Critères de validations:
--
+-Invisibilité
+-Nouveau écran avec message + Shrek
+-Detection de la collision avec le personnage uniquement
 
 
 Fonctionnalité 3 : [Sprites de déplacements]
@@ -27,12 +29,14 @@ Critères de validations:
 
 
 Fonctionnalité 4 : [Case Téléportation]
-Responsable : 
+Responsable : thirion86u
 
-
+Case qui téléporte le personnage ailleurs dans le labyrinthe lorsque celui-ci la traverse
 
 Critères de validations:
--
+-Sprite reconnaissable
+-Deplacement du personnage
+-Seul le personnage peut la déclencher
 
 
 Fonctionnalité 5 : [Création des monstres]
