@@ -10,8 +10,15 @@ import application.Case;
 import application.Jeu;
 import application.Player;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestTP.
+ */
 public class TestTP {
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		Jeu j = new Jeu();

@@ -9,8 +9,15 @@ import application.Jeu;
 import application.Monstre;
 import moteurJeu.moteur.MoteurGraphique;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestMonstre.
+ */
 public class TestMonstre {
 	
+	/**
+	 * Tester deplacement horizontale.
+	 */
 	@Test
 	public void TesterDeplacementHorizontale() {
 		Jeu j = new Jeu();
@@ -28,6 +35,9 @@ public class TestMonstre {
 		assertEquals("Test Deplacement du monstre",test,true);
 	}
 	
+	/**
+	 * Tester deplacement verticale.
+	 */
 	@Test
 	public void TesterDeplacementVerticale() {
 		Jeu j = new Jeu();

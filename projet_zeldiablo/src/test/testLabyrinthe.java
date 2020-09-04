@@ -12,8 +12,15 @@ import application.Dessin;
 import application.Jeu;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class testLabyrinthe.
+ */
 public class testLabyrinthe {
 
+	/**
+	 * Test perso.
+	 */
 	@Test
 	public void testPerso() {
 		Jeu j = new Jeu();

@@ -10,13 +10,25 @@ import application.Case;
 import application.Jeu;
 import application.Player;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class InertieTest.
+ */
 public class InertieTest {
 
 
+	/** The j. */
 	Jeu j = new Jeu();
+	
+	/** The p 1. */
 	Player p1 = new Player(400,320,10);
+	
+	/** The cases. */
 	ArrayList<Case> cases = new ArrayList<Case>();
 
+	/**
+	 * Test inertie.
+	 */
 	@Test
 	public void testInertie() {
 	

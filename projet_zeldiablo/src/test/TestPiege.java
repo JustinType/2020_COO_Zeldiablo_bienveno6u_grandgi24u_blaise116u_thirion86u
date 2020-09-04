@@ -12,8 +12,15 @@ import application.Jeu;
 import application.Player;
 import moteurJeu.moteur.MoteurGraphique;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestPiege.
+ */
 public class TestPiege {
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		Jeu j = new Jeu();
