@@ -22,7 +22,7 @@ public class Player {
 		this.xVel = 0;
 		this.yVel = 0;
 		this.setVie(10);
-		this.direction="megaman";
+		this.direction="";
 		this.piege=false;
 		this.setShrek(false);
 	}
@@ -88,7 +88,6 @@ public class Player {
 	
 	public void doEffect() {
 		if (effet != null) {
-			System.out.println("effet");
 			if(this.effet.increseTime()) {	
 				this.vitesse = this.effet.getVitesse();
 			}else {
@@ -149,5 +148,13 @@ public class Player {
 
 	public void setShrek(boolean shrek) {
 		this.shrek = shrek;
+	}
+	
+	public void setEffect(Effect e) {
+		this.effet = e;
+	}
+	
+	public int getvitesse() {
+		return this.vitesse;
 	}
 }
