@@ -1,10 +1,10 @@
 Fonctionnalité 1 : [Sprite de dégâts]
-responsable:
+responsable: bienveno6u
 
-
+Lorsque le personnage prend des dégâts d'un piège, une animation de dégât ce lance.
 
 Critères de validations:
--
+-Lors d'une prise de dégâts d'un piège, l'animation se lance correctement
 
 Fonctionnalité 2 : [Case Shrek (EasterEgg)]
 responsable: thirion86u
@@ -18,10 +18,12 @@ Critères de validations:
 Fonctionnalité 3 : [Sprites de déplacements]
 Responsable : bienveno6
 
+Selon la direction que prend le personnage (droite ou gauche), le personnage change de sprite pour prendre celui
+que la direction indique
 
 
 Critères de validations:
--
+-Lors d'un déplacement, le sprite se modifie correctement
 
 
 Fonctionnalité 4 : [Case Téléportation]
