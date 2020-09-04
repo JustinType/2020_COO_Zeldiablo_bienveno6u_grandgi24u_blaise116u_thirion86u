@@ -62,7 +62,7 @@ public class Player {
 				this.gagne=true;
 			}
 			else if (collision(c,xv,yv) && c.getSprite()=="case_12_9") {
-				c.setSprite("case_5_4");
+				c.setSprite("case_6_4");
 				this.vie--;
 				this.piege=true;
 			}
