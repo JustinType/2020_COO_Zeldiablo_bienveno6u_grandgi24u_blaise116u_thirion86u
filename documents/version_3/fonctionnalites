@@ -57,10 +57,12 @@ Critères de validations:
 
 
 Fonctionnalité 7 : [Case Rapide/Lente]
-Responsable : 
+Responsable : switchBls
 
-
+Implementation de case qui change la vitesse du joueur lorsqu'il entre en colision avec.
 
 Critères de validations:
--
-
+-Le temps doit etre un parametre
+-La vitesse doit etre un parametre
+-Des cases lentes
+-Des cases Rapide
