@@ -9,8 +9,15 @@ import application.Jeu;
 import application.Player;
 import moteurJeu.moteur.MoteurGraphique;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestMultietage.
+ */
 public class TestMultietage {
 
+	/**
+	 * Test detection escalier.
+	 */
 	@Test
 	public void testDetectionEscalier() {
 		Jeu j = new Jeu();

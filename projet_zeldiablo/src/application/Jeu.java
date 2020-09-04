@@ -7,18 +7,39 @@ import moteurJeu.moteur.CClavier;
 import moteurJeu.moteur.CSouris;
 import moteurJeu.moteur.JeuAbstract;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Jeu.
+ */
 public class Jeu implements JeuAbstract {
 
+	/** The cases 2. */
 	ArrayList<Case> cases, cases2; 
 
+	/** The spawn X. */
 	int spawnX = 465;
+	
+	/** The spawn Y. */
 	int spawnY = 45;
+	
+	/** The vitesse. */
 	int vitesse = 3;
+	
+	/** The p 1. */
 	Player p1 = new Player(spawnX, spawnY, vitesse);
+	
+	/** The collision escalier. */
 	private Boolean collisionEscalier = false; 
+	
+	/** The etremonter. */
 	private Boolean etremonter = false;
+	
+	/** The m. */
 	Map m = new Map();
 
+	/**
+	 * Instantiates a new jeu.
+	 */
 	public Jeu() {
 		// Creation du labyrinthe par defaut
 		this.cases = new ArrayList<>();   
@@ -67,6 +88,11 @@ public class Jeu implements JeuAbstract {
 
 	}
 
+	/**
+	 * Creer lab 2.
+	 *
+	 * @return the array list
+	 */
 	public ArrayList<Case> creerLab2() {
 		this.cases2 = new ArrayList<>();
 		
@@ -114,6 +140,13 @@ public class Jeu implements JeuAbstract {
 		return this.cases2;
 	}
 
+	/**
+	 * Evoluer.
+	 *
+	 * @param clavier the clavier
+	 * @param souris the souris
+	 * @return the string
+	 */
 	@Override
 	public String evoluer(CClavier clavier, CSouris souris) {
 		if(this.p1.getX() > 840 && this.p1.getX() < 870 && this.etremonter == false) {
@@ -145,28 +178,58 @@ public class Jeu implements JeuAbstract {
 		return ("");
 	}
 
+	/**
+	 * Etre fini.
+	 *
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean etreFini() {
 		// le jeu n'est jamais fini
 		return false;
 	}
 
+	/**
+	 * Gets the player.
+	 *
+	 * @return the player
+	 */
 	public Player getPlayer() {
 		return p1;
 	}
 
+	/**
+	 * Gets the cases.
+	 *
+	 * @return the cases
+	 */
 	public ArrayList<Case> getCases() {
 		return this.cases;
 	}
 
+	/**
+	 * Gets the collision escalier.
+	 *
+	 * @return the collision escalier
+	 */
 	public Boolean getcollisionEscalier() {
 		return this.collisionEscalier;
 	}
 	
+	/**
+	 * Gets the etremonter.
+	 *
+	 * @return the etremonter
+	 */
 	public Boolean getetremonter() {
 		return this.etremonter;
 	}
 	
+	/**
+	 * Sets the cases.
+	 *
+	 * @param c the new cases
+	 */
 	public void setCases(ArrayList<Case> c) {
 		this.cases = c;
 	}

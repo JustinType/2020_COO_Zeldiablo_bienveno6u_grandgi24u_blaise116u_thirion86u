@@ -2,11 +2,25 @@ package application;
 
 import moteurJeu.sprite.Sprites;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Monstre.
+ */
 public class Monstre {
 
+	/** The y. */
 	private int x,y;
+	
+	/** The sens. */
 	private String sens;
 
+	/**
+	 * Instantiates a new monstre.
+	 *
+	 * @param x the x
+	 * @param y the y
+	 * @param n the n
+	 */
 	public Monstre(int x, int y, String n) {
 		if(n.equals("H")) {
 			sens = "left";
@@ -17,6 +31,12 @@ public class Monstre {
 		this.y = y;
 	}
 
+	/**
+	 * Deplacer monstre horizontale.
+	 *
+	 * @param x1 the x 1
+	 * @param x2 the x 2
+	 */
 	public void deplacerMonstreHorizontale(int x1, int x2) {
 		if(sens.equals("left")) {
 			this.x--;
@@ -31,6 +51,12 @@ public class Monstre {
 		}
 	}
 	
+	/**
+	 * Deplacer monstre verticale.
+	 *
+	 * @param y1 the y 1
+	 * @param y2 the y 2
+	 */
 	public void deplacerMonstreVerticale(int y1, int y2) {
 		if(sens.equals("up")) {
 			this.y--;
@@ -45,10 +71,20 @@ public class Monstre {
 		}
 	}
 
+	/**
+	 * Gets the x.
+	 *
+	 * @return the x
+	 */
 	public int getX() {
 		return this.x;
 	}
 
+	/**
+	 * Gets the y.
+	 *
+	 * @return the y
+	 */
 	public int getY() {
 		return this.y;
 	}

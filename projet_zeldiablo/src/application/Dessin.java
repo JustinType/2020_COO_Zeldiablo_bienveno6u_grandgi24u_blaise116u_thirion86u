@@ -11,16 +11,38 @@ import moteurJeu.moteur.DessinAbstract;
 import moteurJeu.sprite.Sprites;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Dessin.
+ */
 public class Dessin implements DessinAbstract {
 
+	/** The j. */
 	Jeu j;
+	
+	/** The m. */
 	Monstre m = new Monstre(435,255,"H");
+	
+	/** The m 2. */
 	Monstre m2 = new Monstre(135,495," ");
+	
+	/** The m 3. */
 	Monstre m3 = new Monstre(855,555," ");
+	
+	/** The m 4. */
 	Monstre m4 = new Monstre(855,285," ");
+	
+	/** The m 5. */
 	Monstre m5 = new Monstre(345,375," ");
+	
+	/** The m 6. */
 	Monstre m6 = new Monstre(225,255," ");
 
+	/**
+	 * Instantiates a new dessin.
+	 *
+	 * @param j the j
+	 */
 	public Dessin(Jeu j) {
 		// charger sprites
 		this.j = j;
@@ -35,6 +57,11 @@ public class Dessin implements DessinAbstract {
 		Sprites.chargerImage("Shrek", "images/shrek.png");
 	}
 
+	/**
+	 * Dessiner.
+	 *
+	 * @param image the image
+	 */
 	@Override
 	public void dessiner(BufferedImage image) {
 		Graphics2D g=(Graphics2D)image.getGraphics();
