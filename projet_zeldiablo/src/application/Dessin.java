@@ -107,7 +107,7 @@ public class Dessin implements DessinAbstract {
 				}
 			if((j.getPlayer().getX() > m.getX()-10 && j.getPlayer().getX() < m.getX()+10)||(j.getPlayer().getX() > m2.getX()-10 && j.getPlayer().getX() < m2.getX()+10)||(j.getPlayer().getX() > m3.getX()-10 && j.getPlayer().getX() < m3.getX()+10)) {
 				if((j.getPlayer().getY() > m.getY()-10 && j.getPlayer().getY() < m.getY()+10)||(j.getPlayer().getY() > m2.getY()-10 && j.getPlayer().getY() < m2.getY()+10)||(j.getPlayer().getY() > m3.getY()-10 && j.getPlayer().getY() < m3.getY()+10)) {
-					//j.getPlayer().setVie(j.getPlayer().getVie()-1);
+					j.getPlayer().setVie(j.getPlayer().getVie()-1);
 				}
 			}
 			Sprites.dessinerCentre(g,megasprite,j.getPlayer().getX(),j.getPlayer().getY());				
