@@ -27,8 +27,8 @@ public class testLabyrinthe {
 		*/
 		
 		// On test si le perso apparait au bon endroit (apres V1)
-		assertEquals("Le perso doit etre initialise au centre", 465, x);
-		assertEquals("Le perso doit etre initialise au centre", 45, y);
+		assertEquals("Le perso doit etre initialise au bon endroit", 465, x);
+		assertEquals("Le perso doit etre initialise au bon endroit", 45, y);
 		
 		ArrayList<Case> cases = j.getCases();
 		// On test si la premiere case du labyrinthe par defaut est au bon endroit (165,45)
