@@ -36,21 +36,24 @@ Critères de validations:
 
 
 Fonctionnalité 5 : [Création des monstres]
-Responsable : 
+Responsable : grandgi24u	
 
-
+Création d'une classe monstre qui a 3 attributs,
+les coordonnées (x,y) et le sens de déplacement
+(horizontale ou verticale)
 
 Critères de validations:
--
+- L'apparition des monstres dans le labyrinthe
 
 
 Fonctionnalité 6 : [Déplacements par défaut desmonstres]
-Responsable : 
+Responsable : grandgi24u
 
-
+Les monstres effectuent des trajets sur forme de paterne.
+Ils sont controlées par la méthode sedéplacer dans la classe monstre
 
 Critères de validations:
--
+- Ils se déplacent et restent visible sur le labyrinthe.
 
 
 Fonctionnalité 7 : [Case Rapide/Lente]
