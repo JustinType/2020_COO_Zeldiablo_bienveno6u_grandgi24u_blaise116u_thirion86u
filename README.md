@@ -10,8 +10,11 @@
 
 
 
-
-Clément Grandgirard
-Hugo Bienvenot
-Valentin Thirion
-Aurélien Blaise
+<hr>
+ 
+<h3 align="left">Creators :</h3>  
+  
+- Clément Grandgirard
+- Hugo Bienvenot
+- JustinType
+- Aurélien Blaise
